@@ -23,6 +23,8 @@ namespace WSRussia
                 MyResults = 402,
             Coordinator = 41,
                 EditVolonteur = 410,
+                    LoadVolonteur = 4100,
+                    DistributeVolonteur = 4101,
                 EditSponsor = 411,
                 MyResultsCoor = 412,
             Administrator = 42,

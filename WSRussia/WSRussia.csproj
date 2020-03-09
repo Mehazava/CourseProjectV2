@@ -52,11 +52,35 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\FAuthorization\PAdministrator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\PAdministrator.Designer.cs">
+      <DependentUpon>PAdministrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PAboutPrim.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\PAboutPrim.Designer.cs">
+      <DependentUpon>PAboutPrim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PAboutWSRussia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\PAboutWSRussia.Designer.cs">
+      <DependentUpon>PAboutWSRussia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PAboutWS.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Pages\PAboutWS.Designer.cs">
       <DependentUpon>PAboutWS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PAuthorization.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\PAuthorization.Designer.cs">
+      <DependentUpon>PAuthorization.cs</DependentUpon>
     </Compile>
     <Compile Include="PBase.cs">
       <SubType>UserControl</SubType>
@@ -65,6 +89,120 @@
       <DependentUpon>PBase.cs</DependentUpon>
     </Compile>
     <Compile Include="Page.cs" />
+    <Compile Include="Pages\FAboutWS\PHistoryWS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\FAboutWS\PHistoryWS.Designer.cs">
+      <DependentUpon>PHistoryWS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FAboutWS\PChampionships.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\FAboutWS\PChampionships.Designer.cs">
+      <DependentUpon>PChampionships.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FAboutWS\PCompetencies.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\FAboutWS\PCompetencies.Designer.cs">
+      <DependentUpon>PCompetencies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\PParticipant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\PParticipant.Designer.cs">
+      <DependentUpon>PParticipant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\PCoordinator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\PCoordinator.Designer.cs">
+      <DependentUpon>PCoordinator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\PExpert.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\PExpert.Designer.cs">
+      <DependentUpon>PExpert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FParticipant\PMyCompetention.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FParticipant\PMyCompetention.Designer.cs">
+      <DependentUpon>PMyCompetention.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FParticipant\PMyProphile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FParticipant\PMyProphile.Designer.cs">
+      <DependentUpon>PMyProphile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FParticipant\PMyResults.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FParticipant\PMyResults.Designer.cs">
+      <DependentUpon>PMyResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FCoordinator\PDistributeVolonteur.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FCoordinator\PDistributeVolonteur.Designer.cs">
+      <DependentUpon>PDistributeVolonteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FExpert\PCheckResults.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FExpert\PCheckResults.Designer.cs">
+      <DependentUpon>PCheckResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FExpert\PDraw.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FExpert\PDraw.Designer.cs">
+      <DependentUpon>PDraw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FAdministrator\PEditChampionship.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FAdministrator\PEditChampionship.Designer.cs">
+      <DependentUpon>PEditChampionship.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FAdministrator\PEditParticipant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FAdministrator\PEditParticipant.Designer.cs">
+      <DependentUpon>PEditParticipant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FCoordinator\PEditSponsor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FCoordinator\PEditSponsor.Designer.cs">
+      <DependentUpon>PEditSponsor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FCoordinator\PEditVolonteur.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FCoordinator\PEditVolonteur.Designer.cs">
+      <DependentUpon>PEditVolonteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FCoordinator\PLoadVolonteur.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FCoordinator\PLoadVolonteur.Designer.cs">
+      <DependentUpon>PLoadVolonteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FCoordinator\PMyResultsCoor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FCoordinator\PMyResultsCoor.Designer.cs">
+      <DependentUpon>PMyResultsCoor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FExpert\PRating.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\FAuthorization\FExpert\PRating.Designer.cs">
+      <DependentUpon>PRating.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pages\PTitle.cs">

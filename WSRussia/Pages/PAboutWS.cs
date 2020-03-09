@@ -15,5 +15,20 @@ namespace WSRussia
             InitializeComponent();
             labelPageTitle.Text = "О WorldSkills";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ParentF.GoPage(Page.HistoryWS);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ParentF.GoPage(Page.Competencies);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ParentF.GoPage(Page.Championships);
+        }
     }
 }

@@ -74,6 +74,63 @@ namespace WSRussia
                     case Page.AboutWS:
                         SelectPage = new PAboutWS();
                         break;
+                    case Page.Championships:
+                        SelectPage = new PChampionships();
+                        break;
+                    case Page.Competencies:
+                        SelectPage = new PCompetencies();
+                        break;
+                    case Page.HistoryWS:
+                        SelectPage = new PHistoryWS();
+                        break;
+                    case Page.AboutWSRussia:
+                        SelectPage = new PAboutWSRussia();
+                        break;
+                    case Page.AboutPrim:
+                        SelectPage = new PAboutPrim();
+                        break;
+                    case Page.Authorization:
+                        SelectPage = new PAuthorization();
+                        break;
+                    case Page.EditChampionship:
+                        SelectPage = new PEditChampionship();
+                        break;
+                    case Page.EditParticipant:
+                        SelectPage = new PEditParticipant();
+                        break;
+                    case Page.CheckResults:
+                        SelectPage = new PCheckResults();
+                        break;
+                    case Page.Draw:
+                        SelectPage = new PDraw();
+                        break;
+                    case Page.Rating:
+                        SelectPage = new PRating();
+                        break;
+                    case Page.MyCompetention:
+                        SelectPage = new PMyCompetention();
+                        break;
+                    case Page.MyProphile:
+                        SelectPage = new PMyProphile();
+                        break;
+                    case Page.MyResults:
+                        SelectPage = new PMyResults();
+                        break;
+                    case Page.DistributeVolonteur:
+                        SelectPage = new PDistributeVolonteur();
+                        break;
+                    case Page.EditVolonteur:
+                        SelectPage = new PEditVolonteur();
+                        break;
+                    case Page.EditSponsor:
+                        SelectPage = new PEditSponsor();
+                        break;
+                    case Page.LoadVolonteur:
+                        SelectPage = new PLoadVolonteur();
+                        break;
+                    case Page.MyResultsCoor:
+                        SelectPage = new PMyResultsCoor();
+                        break;
                 }
                 if (SelectPage == null)
                 {
