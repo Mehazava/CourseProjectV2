@@ -1,0 +1,12 @@
+E:\Work\CourseProjectV2\WSRussia\bin\Debug\WSRussia.exe.config
+E:\Work\CourseProjectV2\WSRussia\bin\Debug\WSRussia.exe
+E:\Work\CourseProjectV2\WSRussia\bin\Debug\WSRussia.pdb
+E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.csprojAssemblyReference.cache
+E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.MainForm.resources
+E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.Properties.Resources.resources
+E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.PTitle.resources
+E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.csproj.GenerateResource.cache
+E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.exe
+E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.pdb
+E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.PBase.resources
+E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.PAboutWS.resources
