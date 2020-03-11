@@ -25,11 +25,9 @@ namespace WSRussia.Models
             //if (Database) { }
             //Database.EnsureCreated();
         }
-
-        public WSRContext(DbContextOptions<WSRContext> options)
-            : base(options)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            Database.EnsureCreated();
+            optionsBuilder.UseSqlServer(Properties.Settings.Default.DBConnection);
         }
     }
 }

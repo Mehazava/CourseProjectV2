@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WSRussia.Models;
 
 namespace WSRussia
 {
@@ -19,11 +20,13 @@ namespace WSRussia
             TimeRemaining.Label = labelTimeRemaining;
             CurrentPage = Page.Error;
             ControlPage = null;
+            //db = new WSRContext();
             GoPage(Page.Title);
         }
         private TimeToContest TimeRemaining;
         private Page CurrentPage;
         private UserControl ControlPage;
+        public WSRContext db;
         public void GoPage(Page page)
         {
             SetupForm(page);
