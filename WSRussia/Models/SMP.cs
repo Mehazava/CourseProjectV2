@@ -10,8 +10,10 @@ namespace WSRussia.Models
     public class SMP
     {
         public int Id { get; set; }
-        public string Time { get; set; }//? how to separate?
-        [MaxLength(200)]
+        public string Category { get; set; }
+        public int Next { get; set; }
+        public string Time { get; set; }
+        [MaxLength(300)]
         public string Description { get; set; }
     }
 }

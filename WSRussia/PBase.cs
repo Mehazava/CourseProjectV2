@@ -23,7 +23,7 @@ namespace WSRussia
                 MainForm form = this.ParentForm as MainForm;
                 if (form == null)
                 {
-                    throw new Exception("An error getting a parent form of user control.");
+                    throw new Exception("An error occured while getting a parent form of user control.");
                 }
                 return form;
             }

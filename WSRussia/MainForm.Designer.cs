@@ -36,6 +36,7 @@
             this.labelCLocation = new System.Windows.Forms.Label();
             this.labelCTime = new System.Windows.Forms.Label();
             this.panelPage = new System.Windows.Forms.Panel();
+            this.buttonLogout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,12 +114,24 @@
             this.panelPage.Size = new System.Drawing.Size(784, 400);
             this.panelPage.TabIndex = 6;
             // 
+            // buttonLogout
+            // 
+            this.buttonLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonLogout.Location = new System.Drawing.Point(688, 23);
+            this.buttonLogout.Name = "buttonLogout";
+            this.buttonLogout.Size = new System.Drawing.Size(75, 26);
+            this.buttonLogout.TabIndex = 7;
+            this.buttonLogout.Text = "Logout";
+            this.buttonLogout.UseVisualStyleBackColor = true;
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(784, 562);
+            this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.panelPage);
             this.Controls.Add(this.labelCTime);
             this.Controls.Add(this.labelCLocation);
@@ -144,6 +157,7 @@
         private System.Windows.Forms.Label labelCLocation;
         private System.Windows.Forms.Label labelCTime;
         private System.Windows.Forms.Panel panelPage;
+        private System.Windows.Forms.Button buttonLogout;
     }
 }
 

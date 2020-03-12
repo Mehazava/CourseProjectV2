@@ -20,6 +20,7 @@ namespace WSRussia
             TimeRemaining.Label = labelTimeRemaining;
             CurrentPage = Page.Error;
             ControlPage = null;
+            Login = null;
             //db = new WSRContext();
             GoPage(Page.Title);
         }
@@ -27,6 +28,7 @@ namespace WSRussia
         private Page CurrentPage;
         private UserControl ControlPage;
         public WSRContext db;
+        public Person Login;
         public void GoPage(Page page)
         {
             SetupForm(page);
@@ -34,6 +36,16 @@ namespace WSRussia
         }
         private void SetupForm(Page page)
         {
+            if (Login == null)
+            {
+                buttonLogout.Enabled = false;
+                buttonLogout.Visible = false;
+            }
+            else
+            {
+                buttonLogout.Enabled = true;
+                buttonLogout.Visible = true;
+            }
             if (page == Page.Title)
             {
                 if (CurrentPage != Page.Title)
@@ -49,6 +61,11 @@ namespace WSRussia
                     this.Text = "WSR 2020";
                 }
                 PTitle SelectPage = new PTitle();
+                if (Login != null)
+                {
+                    SelectPage.button4.Visible = false;
+                    SelectPage.button4.Enabled = false;
+                }
                 if (SelectPage == null)
                 {
                     throw new Exception("Failed to construct a page.");
@@ -150,6 +167,12 @@ namespace WSRussia
         private void buttonBack_Click(object sender, EventArgs e)
         {
             GoPage((Page)((int)CurrentPage / 10));
+        }
+
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            Login = null;
+            GoPage(Page.Title);
         }
     }
 }
