@@ -32,5 +32,41 @@ namespace WSRussia
         {
             ParentF.GoPage(Page.AboutWS);
         }
+
+        private void buttonGoAboutWSR_Click(object sender, EventArgs e)
+        {
+            ParentF.GoPage(Page.AboutWSRussia);
+        }
+
+        private void buttonGoAboutPrim_Click(object sender, EventArgs e)
+        {
+            ParentF.GoPage(Page.AboutPrim);
+        }
+
+        private void buttonGoLogin_Click(object sender, EventArgs e)
+        {
+            if (ParentF.Login == null)
+            {
+                ParentF.GoPage(Page.Authorization);
+            }
+            else
+            {
+                switch (ParentF.LoginType)
+                {
+                    case 1:
+                        ParentF.GoPage(Page.Participant);
+                        break;
+                    case 2:
+                        ParentF.GoPage(Page.Coordinator);
+                        break;
+                    case 3:
+                        ParentF.GoPage(Page.Expert);
+                        break;
+                    case 4:
+                        ParentF.GoPage(Page.Administrator);
+                        break;
+                }
+            }
+        }
     }
 }

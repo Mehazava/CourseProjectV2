@@ -15,5 +15,20 @@ namespace WSRussia
             InitializeComponent();
             labelPageTitle.Text = "История WorldSkills";
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+        }
     }
 }

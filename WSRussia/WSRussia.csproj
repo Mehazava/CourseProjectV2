@@ -233,11 +233,11 @@
     <Compile Include="Pages\FAuthorization\FParticipant\PMyCompetention.Designer.cs">
       <DependentUpon>PMyCompetention.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\FAuthorization\FParticipant\PMyProphile.cs">
+    <Compile Include="Pages\FAuthorization\FParticipant\PMyProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Pages\FAuthorization\FParticipant\PMyProphile.Designer.cs">
-      <DependentUpon>PMyProphile.cs</DependentUpon>
+    <Compile Include="Pages\FAuthorization\FParticipant\PMyProfile.Designer.cs">
+      <DependentUpon>PMyProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="Pages\FAuthorization\FParticipant\PMyResults.cs">
       <SubType>UserControl</SubType>
@@ -245,11 +245,11 @@
     <Compile Include="Pages\FAuthorization\FParticipant\PMyResults.Designer.cs">
       <DependentUpon>PMyResults.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\FAuthorization\FCoordinator\PDistributeVolonteur.cs">
+    <Compile Include="Pages\FAuthorization\FCoordinator\PDistributeVolunteer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Pages\FAuthorization\FCoordinator\PDistributeVolonteur.Designer.cs">
-      <DependentUpon>PDistributeVolonteur.cs</DependentUpon>
+    <Compile Include="Pages\FAuthorization\FCoordinator\PDistributeVolunteer.Designer.cs">
+      <DependentUpon>PDistributeVolunteer.cs</DependentUpon>
     </Compile>
     <Compile Include="Pages\FAuthorization\FExpert\PCheckResults.cs">
       <SubType>UserControl</SubType>
@@ -281,17 +281,17 @@
     <Compile Include="Pages\FAuthorization\FCoordinator\PEditSponsor.Designer.cs">
       <DependentUpon>PEditSponsor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\FAuthorization\FCoordinator\PEditVolonteur.cs">
+    <Compile Include="Pages\FAuthorization\FCoordinator\PEditVolunteer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Pages\FAuthorization\FCoordinator\PEditVolonteur.Designer.cs">
-      <DependentUpon>PEditVolonteur.cs</DependentUpon>
+    <Compile Include="Pages\FAuthorization\FCoordinator\PEditVolunteer.Designer.cs">
+      <DependentUpon>PEditVolunteer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\FAuthorization\FCoordinator\PLoadVolonteur.cs">
+    <Compile Include="Pages\FAuthorization\FCoordinator\PLoadVolunteer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Pages\FAuthorization\FCoordinator\PLoadVolonteur.Designer.cs">
-      <DependentUpon>PLoadVolonteur.cs</DependentUpon>
+    <Compile Include="Pages\FAuthorization\FCoordinator\PLoadVolunteer.Designer.cs">
+      <DependentUpon>PLoadVolunteer.cs</DependentUpon>
     </Compile>
     <Compile Include="Pages\FAuthorization\FCoordinator\PMyResultsCoor.cs">
       <SubType>UserControl</SubType>
@@ -325,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\FAboutWS\PHistoryWS.resx">
       <DependentUpon>PHistoryWS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\FAuthorization\FParticipant\PMyProfile.resx">
+      <DependentUpon>PMyProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\FAuthorization\PAdministrator.resx">
       <DependentUpon>PAdministrator.cs</DependentUpon>
@@ -391,6 +394,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CSV\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Graphics\Spidey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Graphics\NoRobo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.1.0.19235.1\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.1.0.19235.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />

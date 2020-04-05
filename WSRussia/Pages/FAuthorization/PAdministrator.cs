@@ -15,5 +15,44 @@ namespace WSRussia
             InitializeComponent();
             labelPageTitle.Text = "Меню администратора";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ParentF.GoPage(Page.EditChampionship);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ParentF.GoPage(Page.EditParticipant);
+        }
+
+        private void PAdministrator_Paint(object sender, PaintEventArgs e)
+        {
+            if (DateTime.Now.Hour < 10)
+            {
+                labelGreeting.Text = "Доброе утро\n";
+            }
+            else if (DateTime.Now.Hour < 18)
+            {
+                labelGreeting.Text = "Добрый день\n";
+            }
+            else
+            {
+                labelGreeting.Text = "Добрый вечер\n";
+            }
+            if (ParentF.Login == null)
+            {
+                throw new Exception("Not logged in when you should be.");
+            }
+            if (ParentF.Login.Sex == 0)
+            {
+                labelGreeting.Text += "Ms. ";
+            }
+            else
+            {
+                labelGreeting.Text += "Mr. ";
+            }
+            labelGreeting.Text += ParentF.Login.Name;
+        }
     }
 }

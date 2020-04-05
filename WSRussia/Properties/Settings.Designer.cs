@@ -25,7 +25,7 @@ namespace WSRussia.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Server=(localdb)\\\\mssqllocaldb;Database=helloappdb;Trusted_Connection=True;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=(localdb)\\\\mssqllocaldb;Database=WSRdb;Trusted_Connection=True;")]
         public string DBConnection {
             get {
                 return ((string)(this["DBConnection"]));

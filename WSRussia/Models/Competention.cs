@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ namespace WSRussia.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        [MaxLength(2000)]
         public string Description { get; set; }
         //by groups they are separated in tree:
         //1 : Civ transport maintenance
@@ -19,8 +21,8 @@ namespace WSRussia.Models
         //5 : Art&Design
         //6 : kk
         public int Group { get; set; }
-        public SMP SMP { get; set; }
-        public Infrastructure Infrastructure { get; set; }
+        public int SMP { get; set; }
+        public int Infrastructure { get; set; }
         public string MapPath { get; set; }
     }
 }

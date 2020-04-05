@@ -32,7 +32,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelGreeting = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +42,7 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.labelGreeting);
             this.panel1.Location = new System.Drawing.Point(13, 70);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(758, 385);
@@ -57,6 +57,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Просмотр результатов";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -67,6 +68,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Ввод оценок";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -77,22 +79,24 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Жеребьевка";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label1
+            // labelGreeting
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(225, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(323, 40);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Добро!";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelGreeting.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGreeting.Location = new System.Drawing.Point(225, 0);
+            this.labelGreeting.Name = "labelGreeting";
+            this.labelGreeting.Size = new System.Drawing.Size(323, 40);
+            this.labelGreeting.TabIndex = 0;
+            this.labelGreeting.Text = "Добро!";
+            this.labelGreeting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PExpert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.Controls.Add(this.panel1);
             this.Name = "PExpert";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.PExpert_Paint);
             this.Controls.SetChildIndex(this.labelPageTitle, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.panel1.ResumeLayout(false);
@@ -106,6 +110,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelGreeting;
     }
 }

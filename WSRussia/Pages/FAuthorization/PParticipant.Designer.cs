@@ -31,11 +31,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.buttonMyProfile = new System.Windows.Forms.Button();
+            this.pictureYou = new System.Windows.Forms.PictureBox();
+            this.labelGreeting = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureYou)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -43,9 +43,9 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.buttonMyProfile);
+            this.panel1.Controls.Add(this.pictureYou);
+            this.panel1.Controls.Add(this.labelGreeting);
             this.panel1.Location = new System.Drawing.Point(13, 70);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(758, 385);
@@ -60,6 +60,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Мои результаты";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -70,44 +71,47 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Моя компетенция";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // buttonMyProfile
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(445, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(266, 90);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Мой профиль";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonMyProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonMyProfile.Location = new System.Drawing.Point(445, 48);
+            this.buttonMyProfile.Name = "buttonMyProfile";
+            this.buttonMyProfile.Size = new System.Drawing.Size(266, 90);
+            this.buttonMyProfile.TabIndex = 2;
+            this.buttonMyProfile.Text = "Мой профиль";
+            this.buttonMyProfile.UseVisualStyleBackColor = true;
+            this.buttonMyProfile.Click += new System.EventHandler(this.buttonMyProfile_Click);
             // 
-            // pictureBox1
+            // pictureYou
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(88, 121);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(160, 200);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pictureYou.Location = new System.Drawing.Point(88, 121);
+            this.pictureYou.Name = "pictureYou";
+            this.pictureYou.Size = new System.Drawing.Size(160, 200);
+            this.pictureYou.TabIndex = 1;
+            this.pictureYou.TabStop = false;
             // 
-            // label1
+            // labelGreeting
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(15, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(323, 85);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Добро!";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelGreeting.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGreeting.Location = new System.Drawing.Point(15, 11);
+            this.labelGreeting.Name = "labelGreeting";
+            this.labelGreeting.Size = new System.Drawing.Size(323, 85);
+            this.labelGreeting.TabIndex = 0;
+            this.labelGreeting.Text = "Добро!";
+            this.labelGreeting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PParticipant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.Controls.Add(this.panel1);
             this.Name = "PParticipant";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.PParticipant_Paint);
             this.Controls.SetChildIndex(this.labelPageTitle, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureYou)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -117,8 +121,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonMyProfile;
+        private System.Windows.Forms.PictureBox pictureYou;
+        private System.Windows.Forms.Label labelGreeting;
     }
 }

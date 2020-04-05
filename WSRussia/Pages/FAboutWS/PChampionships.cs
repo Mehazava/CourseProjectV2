@@ -14,6 +14,7 @@ namespace WSRussia
         {
             InitializeComponent();
             labelPageTitle.Text = "Чемпионаты стран WSI";
+
         }
     }
 }

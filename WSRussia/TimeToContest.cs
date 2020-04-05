@@ -11,7 +11,7 @@ namespace WSRussia
     {
         public TimeToContest()
         {
-            ContestDate = DateTime.Parse("2/4/2020");
+            ContestDate = DateTime.Parse("2/5/2020");
             myTimer = new Timer();
             myTimer.Interval = 1000;
             myTimer.Tick += UpdateLabel;

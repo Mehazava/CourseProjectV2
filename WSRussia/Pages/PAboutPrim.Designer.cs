@@ -29,40 +29,57 @@
         private void InitializeComponent()
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.HistoryTabPage = new System.Windows.Forms.TabPage();
+            this.EventsTabPage = new System.Windows.Forms.TabPage();
+            this.TourismTabPage = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(0, 71);
+            this.tabControl1.Controls.Add(this.HistoryTabPage);
+            this.tabControl1.Controls.Add(this.EventsTabPage);
+            this.tabControl1.Controls.Add(this.TourismTabPage);
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tabControl1.ItemSize = new System.Drawing.Size(100, 30);
+            this.tabControl1.Location = new System.Drawing.Point(23, 71);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(783, 396);
+            this.tabControl1.Size = new System.Drawing.Size(740, 376);
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 1;
             // 
-            // tabPage1
+            // HistoryTabPage
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(775, 370);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.HistoryTabPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.HistoryTabPage.Location = new System.Drawing.Point(4, 34);
+            this.HistoryTabPage.Name = "HistoryTabPage";
+            this.HistoryTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.HistoryTabPage.Size = new System.Drawing.Size(732, 338);
+            this.HistoryTabPage.TabIndex = 0;
+            this.HistoryTabPage.Text = "История";
+            this.HistoryTabPage.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // EventsTabPage
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(775, 370);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.EventsTabPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EventsTabPage.Location = new System.Drawing.Point(4, 34);
+            this.EventsTabPage.Name = "EventsTabPage";
+            this.EventsTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.EventsTabPage.Size = new System.Drawing.Size(732, 338);
+            this.EventsTabPage.TabIndex = 1;
+            this.EventsTabPage.Text = "События";
+            this.EventsTabPage.UseVisualStyleBackColor = true;
+            // 
+            // TourismTabPage
+            // 
+            this.TourismTabPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TourismTabPage.Location = new System.Drawing.Point(4, 34);
+            this.TourismTabPage.Name = "TourismTabPage";
+            this.TourismTabPage.Size = new System.Drawing.Size(732, 338);
+            this.TourismTabPage.TabIndex = 2;
+            this.TourismTabPage.Text = "Туризм";
+            this.TourismTabPage.UseVisualStyleBackColor = true;
             // 
             // PAboutPrim
             // 
@@ -79,7 +96,8 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage HistoryTabPage;
+        private System.Windows.Forms.TabPage EventsTabPage;
+        private System.Windows.Forms.TabPage TourismTabPage;
     }
 }

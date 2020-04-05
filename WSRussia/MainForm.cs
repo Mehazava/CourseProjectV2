@@ -21,7 +21,8 @@ namespace WSRussia
             CurrentPage = Page.Error;
             ControlPage = null;
             Login = null;
-            //db = new WSRContext();
+            LoginType = 0;
+            db = new WSRContext();
             GoPage(Page.Title);
         }
         private TimeToContest TimeRemaining;
@@ -29,10 +30,35 @@ namespace WSRussia
         private UserControl ControlPage;
         public WSRContext db;
         public Person Login;
+        public int LoginType;//0 - no, 1 - parti, 2 - coor, 3 - expe, 4 - admi 
         public void GoPage(Page page)
         {
             SetupForm(page);
             CurrentPage = page;
+        }
+        public void UpdateLogin()
+        {
+            Person GetUser = null;
+            switch (LoginType)
+            {
+                case 1:
+                    GetUser = db.Participants.FirstOrDefault(u => u.Id == Login.Id);
+                    break;
+                case 2:
+                    GetUser = db.Coordinators.FirstOrDefault(u => u.Id == Login.Id);
+                    break;
+                case 3:
+                    GetUser = db.Experts.FirstOrDefault(u => u.Id == Login.Id);
+                    break;
+                case 4:
+                    GetUser = db.Administrators.FirstOrDefault(u => u.Id == Login.Id);
+                    break;
+            }
+            if (GetUser == null)
+            {
+                throw new Exception("User not found.");
+            }
+            Login = GetUser;
         }
         private void SetupForm(Page page)
         {
@@ -63,8 +89,11 @@ namespace WSRussia
                 PTitle SelectPage = new PTitle();
                 if (Login != null)
                 {
-                    SelectPage.button4.Visible = false;
-                    SelectPage.button4.Enabled = false;
+                    SelectPage.buttonGoLogin.Text = "User's page";
+                }
+                else
+                {
+                    SelectPage.buttonGoLogin.Text = "Login";
                 }
                 if (SelectPage == null)
                 {
@@ -130,26 +159,38 @@ namespace WSRussia
                     case Page.MyCompetention:
                         SelectPage = new PMyCompetention();
                         break;
-                    case Page.MyProphile:
+                    case Page.MyProfile:
                         SelectPage = new PMyProphile();
                         break;
                     case Page.MyResults:
                         SelectPage = new PMyResults();
                         break;
-                    case Page.DistributeVolonteur:
+                    case Page.DistributeVolunteer:
                         SelectPage = new PDistributeVolonteur();
                         break;
-                    case Page.EditVolonteur:
+                    case Page.EditVolunteer:
                         SelectPage = new PEditVolonteur();
                         break;
                     case Page.EditSponsor:
                         SelectPage = new PEditSponsor();
                         break;
-                    case Page.LoadVolonteur:
+                    case Page.LoadVolunteer:
                         SelectPage = new PLoadVolonteur();
                         break;
                     case Page.MyResultsCoor:
                         SelectPage = new PMyResultsCoor();
+                        break;
+                    case Page.Participant:
+                        SelectPage = new PParticipant();
+                        break;
+                    case Page.Expert:
+                        SelectPage = new PExpert();
+                        break;
+                    case Page.Coordinator:
+                        SelectPage = new PCoordinator();
+                        break;
+                    case Page.Administrator:
+                        SelectPage = new PAdministrator();
                         break;
                 }
                 if (SelectPage == null)
@@ -172,6 +213,7 @@ namespace WSRussia
         private void buttonLogout_Click(object sender, EventArgs e)
         {
             Login = null;
+            LoginType = 0;
             GoPage(Page.Title);
         }
     }
