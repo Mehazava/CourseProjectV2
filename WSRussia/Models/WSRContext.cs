@@ -87,6 +87,14 @@ namespace WSRussia.Models
                 Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.Competentions ON;");
                 SaveChanges();
                 Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.Competentions OFF;");
+                using (var reader = new StreamReader(DPath + "Championships.csv"))
+                using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                {
+                    Championships.AddRange(csv.GetRecords<Championship>());
+                }
+                Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.Championships ON;");
+                SaveChanges();
+                Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.Championships OFF;");
                 Database.CloseConnection();
             }
         }

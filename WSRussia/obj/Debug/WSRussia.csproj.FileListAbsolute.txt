@@ -87,3 +87,4 @@ E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.PAboutWSRussia.resources
 E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.PAuthorization.resources
 E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.csproj.CopyComplete
 E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.PMyProphile.resources
+E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.PMyCompetention.resources

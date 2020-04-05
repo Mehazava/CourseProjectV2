@@ -11,6 +11,6 @@ namespace WSRussia.Models
         public int Id { get; set; }
         public string Location { get; set; }
         public int Year { get; set; }
-        public int Participants { get; set; }
+        public string Participants { get; set; }
     }
 }
