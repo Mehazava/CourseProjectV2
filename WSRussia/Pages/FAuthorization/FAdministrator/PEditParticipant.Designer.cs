@@ -40,13 +40,19 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonDistribute = new System.Windows.Forms.Button();
-            this.buttonFileLoad = new System.Windows.Forms.Button();
-            this.labelSCompetention = new System.Windows.Forms.Label();
-            this.comboBoxCompetention = new System.Windows.Forms.ComboBox();
+            this.Column5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelSField = new System.Windows.Forms.Label();
+            this.comboBoxField = new System.Windows.Forms.ComboBox();
+            this.labelSFilter = new System.Windows.Forms.Label();
+            this.textBoxFilter = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +60,7 @@
             // 
             this.labelCount.AutoSize = true;
             this.labelCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCount.Location = new System.Drawing.Point(398, 132);
+            this.labelCount.Location = new System.Drawing.Point(410, 88);
             this.labelCount.Name = "labelCount";
             this.labelCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelCount.Size = new System.Drawing.Size(0, 15);
@@ -65,18 +71,16 @@
             // 
             this.labelSCount.AutoSize = true;
             this.labelSCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSCount.Location = new System.Drawing.Point(259, 132);
+            this.labelSCount.Location = new System.Drawing.Point(271, 88);
             this.labelSCount.Name = "labelSCount";
             this.labelSCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelSCount.Size = new System.Drawing.Size(133, 15);
+            this.labelSCount.Size = new System.Drawing.Size(128, 15);
             this.labelSCount.TabIndex = 13;
-            this.labelSCount.Text = "Всего волонтеров:";
+            this.labelSCount.Text = "Всего участников:";
             this.labelSCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -94,14 +98,22 @@
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(13, 150);
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column11,
+            this.Column10,
+            this.Column9});
+            this.dataGridView1.Location = new System.Drawing.Point(13, 106);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(758, 305);
+            this.dataGridView1.Size = new System.Drawing.Size(758, 349);
             this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
+            this.dataGridView1.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView1_UserAddedRow);
+            this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
             // 
             // Column1
             // 
@@ -118,7 +130,6 @@
             this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column2.HeaderText = "Имя";
             this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             this.Column2.Width = 160;
             // 
             // Column3
@@ -126,92 +137,135 @@
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.Column3.DefaultCellStyle = dataGridViewCellStyle5;
             this.Column3.HeaderText = "Пол";
+            this.Column3.Items.AddRange(new object[] {
+            "Жен.",
+            "Муж."});
             this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column3.Width = 80;
             // 
             // Column4
             // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.Column4.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Column4.HeaderText = "Регион";
+            this.Column4.HeaderText = "Страна";
             this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.Column4.Width = 200;
             // 
             // Column5
             // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.Column5.DefaultCellStyle = dataGridViewCellStyle7;
             this.Column5.HeaderText = "Компетенция";
             this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
+            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column5.Width = 250;
             // 
-            // buttonDistribute
+            // Column6
             // 
-            this.buttonDistribute.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDistribute.Location = new System.Drawing.Point(533, 96);
-            this.buttonDistribute.Name = "buttonDistribute";
-            this.buttonDistribute.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.buttonDistribute.Size = new System.Drawing.Size(215, 23);
-            this.buttonDistribute.TabIndex = 11;
-            this.buttonDistribute.Text = "Распределить по компетенциям";
-            this.buttonDistribute.UseVisualStyleBackColor = true;
+            this.Column6.HeaderText = "Результат";
+            this.Column6.Name = "Column6";
             // 
-            // buttonFileLoad
+            // Column7
             // 
-            this.buttonFileLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonFileLoad.Location = new System.Drawing.Point(393, 96);
-            this.buttonFileLoad.Name = "buttonFileLoad";
-            this.buttonFileLoad.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.buttonFileLoad.Size = new System.Drawing.Size(134, 23);
-            this.buttonFileLoad.TabIndex = 10;
-            this.buttonFileLoad.Text = "Загрузка с фаила";
-            this.buttonFileLoad.UseVisualStyleBackColor = true;
+            this.Column7.HeaderText = "Телефон";
+            this.Column7.Name = "Column7";
             // 
-            // labelSCompetention
+            // Column8
             // 
-            this.labelSCompetention.AutoSize = true;
-            this.labelSCompetention.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSCompetention.Location = new System.Drawing.Point(10, 99);
-            this.labelSCompetention.Name = "labelSCompetention";
-            this.labelSCompetention.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelSCompetention.Size = new System.Drawing.Size(110, 16);
-            this.labelSCompetention.TabIndex = 9;
-            this.labelSCompetention.Text = "Компетенция:";
+            this.Column8.HeaderText = "Email";
+            this.Column8.Name = "Column8";
             // 
-            // comboBoxCompetention
+            // Column11
             // 
-            this.comboBoxCompetention.FormattingEnabled = true;
-            this.comboBoxCompetention.Items.AddRange(new object[] {
-            "Все компетенции"});
-            this.comboBoxCompetention.Location = new System.Drawing.Point(127, 98);
-            this.comboBoxCompetention.MaxDropDownItems = 30;
-            this.comboBoxCompetention.Name = "comboBoxCompetention";
-            this.comboBoxCompetention.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBoxCompetention.Size = new System.Drawing.Size(260, 21);
-            this.comboBoxCompetention.TabIndex = 8;
+            this.Column11.HeaderText = "День рождения";
+            this.Column11.Name = "Column11";
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Пароль";
+            this.Column10.Name = "Column10";
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Фото";
+            this.Column9.Name = "Column9";
+            // 
+            // labelSField
+            // 
+            this.labelSField.AutoSize = true;
+            this.labelSField.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSField.Location = new System.Drawing.Point(10, 65);
+            this.labelSField.Name = "labelSField";
+            this.labelSField.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelSField.Size = new System.Drawing.Size(131, 16);
+            this.labelSField.TabIndex = 9;
+            this.labelSField.Text = "Фильтр по полю:";
+            // 
+            // comboBoxField
+            // 
+            this.comboBoxField.FormattingEnabled = true;
+            this.comboBoxField.Items.AddRange(new object[] {
+            "Id",
+            "Имя",
+            "Пол",
+            "Страна",
+            "Компетенция",
+            "Id результата",
+            "Телефон",
+            "Email",
+            "День рождения",
+            "Пароль",
+            "Id фото"});
+            this.comboBoxField.Location = new System.Drawing.Point(147, 63);
+            this.comboBoxField.MaxDropDownItems = 30;
+            this.comboBoxField.Name = "comboBoxField";
+            this.comboBoxField.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.comboBoxField.Size = new System.Drawing.Size(282, 21);
+            this.comboBoxField.TabIndex = 8;
+            this.comboBoxField.SelectedIndexChanged += new System.EventHandler(this.comboBoxField_SelectedIndexChanged);
+            // 
+            // labelSFilter
+            // 
+            this.labelSFilter.AutoSize = true;
+            this.labelSFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSFilter.Location = new System.Drawing.Point(442, 65);
+            this.labelSFilter.Name = "labelSFilter";
+            this.labelSFilter.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelSFilter.Size = new System.Drawing.Size(133, 16);
+            this.labelSFilter.TabIndex = 16;
+            this.labelSFilter.Text = "Строка фильтра:";
+            // 
+            // textBoxFilter
+            // 
+            this.textBoxFilter.Location = new System.Drawing.Point(581, 64);
+            this.textBoxFilter.Name = "textBoxFilter";
+            this.textBoxFilter.Size = new System.Drawing.Size(190, 20);
+            this.textBoxFilter.TabIndex = 17;
+            this.textBoxFilter.TextChanged += new System.EventHandler(this.textBoxFilter_TextChanged);
             // 
             // PEditParticipant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.Controls.Add(this.textBoxFilter);
+            this.Controls.Add(this.labelSFilter);
             this.Controls.Add(this.labelCount);
             this.Controls.Add(this.labelSCount);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.buttonDistribute);
-            this.Controls.Add(this.buttonFileLoad);
-            this.Controls.Add(this.labelSCompetention);
-            this.Controls.Add(this.comboBoxCompetention);
+            this.Controls.Add(this.labelSField);
+            this.Controls.Add(this.comboBoxField);
             this.Name = "PEditParticipant";
+            this.Load += new System.EventHandler(this.PEditParticipant_Load);
             this.Controls.SetChildIndex(this.labelPageTitle, 0);
-            this.Controls.SetChildIndex(this.comboBoxCompetention, 0);
-            this.Controls.SetChildIndex(this.labelSCompetention, 0);
-            this.Controls.SetChildIndex(this.buttonFileLoad, 0);
-            this.Controls.SetChildIndex(this.buttonDistribute, 0);
+            this.Controls.SetChildIndex(this.comboBoxField, 0);
+            this.Controls.SetChildIndex(this.labelSField, 0);
             this.Controls.SetChildIndex(this.dataGridView1, 0);
             this.Controls.SetChildIndex(this.labelSCount, 0);
             this.Controls.SetChildIndex(this.labelCount, 0);
+            this.Controls.SetChildIndex(this.labelSFilter, 0);
+            this.Controls.SetChildIndex(this.textBoxFilter, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -223,14 +277,20 @@
         private System.Windows.Forms.Label labelCount;
         private System.Windows.Forms.Label labelSCount;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label labelSField;
+        private System.Windows.Forms.ComboBox comboBoxField;
+        private System.Windows.Forms.Label labelSFilter;
+        private System.Windows.Forms.TextBox textBoxFilter;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Button buttonDistribute;
-        private System.Windows.Forms.Button buttonFileLoad;
-        private System.Windows.Forms.Label labelSCompetention;
-        private System.Windows.Forms.ComboBox comboBoxCompetention;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
     }
 }

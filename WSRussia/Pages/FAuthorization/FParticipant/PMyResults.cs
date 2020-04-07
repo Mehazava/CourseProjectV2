@@ -25,7 +25,7 @@ namespace WSRussia
             {
                 return;
             }
-            result = ParentF.db.Results.FirstOrDefault(r => r.PersonId == ParentF.Login.Id);
+            result = ParentF.db.Results.FirstOrDefault(r => r.Id == ParentF.Login.ResultId);
             if (result == null)
             {
                 throw new Exception("Result not found.");

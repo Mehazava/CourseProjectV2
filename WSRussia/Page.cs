@@ -30,6 +30,8 @@ namespace WSRussia
             Administrator = 42,
                 EditChampionship = 420,
                 EditParticipant = 421,
+                    AddParticipant = 4210,
+                    ModParticipant = 4211,
             Expert = 43,
                 Draw = 430,
                 Rating = 431,

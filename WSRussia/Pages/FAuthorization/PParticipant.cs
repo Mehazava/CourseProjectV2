@@ -63,7 +63,7 @@ namespace WSRussia
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (ParentF.db.Results.FirstOrDefault(r => r.PersonId == ParentF.Login.Id) == null)
+            if (ParentF.db.Results.FirstOrDefault(r => r.Id == ParentF.Login.ResultId) == null)
             {
                 DialogResult res = MessageBox.Show("Ваши результаты еще не опубликованны",
                     "Не так надо", MessageBoxButtons.OK, MessageBoxIcon.Error);

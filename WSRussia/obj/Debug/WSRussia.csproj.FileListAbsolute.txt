@@ -93,3 +93,4 @@ E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.PEditSponsor.resources
 E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.PEditVolonteur.resources
 E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.PLoadVolonteur.resources
 E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.PDistributeVolonteur.resources
+E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.PEditParticipant.resources
