@@ -10,8 +10,8 @@ namespace WSRussia.Models
     {
         public int Id { get; set; }
         public int PersonId { get; set; }
-        public int ChampionshipId { get; set; }
-        public int CompetentionId { get; set; }
+        public string Championship { get; set; }
+        public string Location { get; set; }
         public string Grade { get; set; }//separated by spaces(15.50 10.00)
     }
 }

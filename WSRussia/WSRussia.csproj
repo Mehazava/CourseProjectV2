@@ -153,6 +153,7 @@
     <Compile Include="Models\Result.cs" />
     <Compile Include="Models\SMP.cs" />
     <Compile Include="Models\Sponsor.cs" />
+    <Compile Include="Models\Volunteer.cs" />
     <Compile Include="Models\WSRContext.cs" />
     <Compile Include="Pages\FAuthorization\PAdministrator.cs">
       <SubType>UserControl</SubType>
@@ -326,11 +327,29 @@
     <EmbeddedResource Include="Pages\FAboutWS\PHistoryWS.resx">
       <DependentUpon>PHistoryWS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pages\FAuthorization\FAdministrator\PEditParticipant.resx">
+      <DependentUpon>PEditParticipant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\FAuthorization\FCoordinator\PDistributeVolunteer.resx">
+      <DependentUpon>PDistributeVolunteer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\FAuthorization\FCoordinator\PEditSponsor.resx">
+      <DependentUpon>PEditSponsor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\FAuthorization\FCoordinator\PEditVolunteer.resx">
+      <DependentUpon>PEditVolunteer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\FAuthorization\FCoordinator\PLoadVolunteer.resx">
+      <DependentUpon>PLoadVolunteer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pages\FAuthorization\FParticipant\PMyCompetention.resx">
       <DependentUpon>PMyCompetention.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\FAuthorization\FParticipant\PMyProfile.resx">
       <DependentUpon>PMyProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\FAuthorization\FParticipant\PMyResults.resx">
+      <DependentUpon>PMyResults.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\FAuthorization\PAdministrator.resx">
       <DependentUpon>PAdministrator.cs</DependentUpon>
@@ -403,6 +422,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Graphics\NoRobo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Graphics\Man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Graphics\Woman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Graphics\Mappa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.1.0.19235.1\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.1.0.19235.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />

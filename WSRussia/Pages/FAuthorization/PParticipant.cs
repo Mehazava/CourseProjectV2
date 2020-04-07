@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -62,6 +63,12 @@ namespace WSRussia
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (ParentF.db.Results.FirstOrDefault(r => r.PersonId == ParentF.Login.Id) == null)
+            {
+                DialogResult res = MessageBox.Show("Ваши результаты еще не опубликованны",
+                    "Не так надо", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             ParentF.GoPage(Page.MyResults);
         }
     }

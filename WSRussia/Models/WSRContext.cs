@@ -22,6 +22,7 @@ namespace WSRussia.Models
         public DbSet<Participant> Participants { get; set; }
         public DbSet<Administrator> Administrators { get; set; }
         public DbSet<Infrastructure> Infrastructures { get; set; }
+        public DbSet<Volunteer> Volunteers { get; set; }
         public DbSet<Result> Results { get; set; }
         public DbSet<SMP> SMPs { get; set; }
         public DbSet<Sponsor> Sponsors { get; set; }
@@ -95,6 +96,46 @@ namespace WSRussia.Models
                 Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.Championships ON;");
                 SaveChanges();
                 Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.Championships OFF;");
+                using (var reader = new StreamReader(DPath + "Infrastructures.csv"))
+                using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                {
+                    Infrastructures.AddRange(csv.GetRecords<Infrastructure>());
+                }
+                Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.Infrastructures ON;");
+                SaveChanges();
+                Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.Infrastructures OFF;");
+                using (var reader = new StreamReader(DPath + "SMPs.csv"))
+                using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                {
+                    SMPs.AddRange(csv.GetRecords<SMP>());
+                }
+                Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.SMPs ON;");
+                SaveChanges();
+                Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.SMPs OFF;");
+                using (var reader = new StreamReader(DPath + "Results.csv"))
+                using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                {
+                    Results.AddRange(csv.GetRecords<Result>());
+                }
+                Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.Results ON;");
+                SaveChanges();
+                Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.Results OFF;");
+                using (var reader = new StreamReader(DPath + "Sponsors.csv"))
+                using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                {
+                    Sponsors.AddRange(csv.GetRecords<Sponsor>());
+                }
+                Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.Sponsors ON;");
+                SaveChanges();
+                Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.Sponsors OFF;");
+                using (var reader = new StreamReader(DPath + "Volunteers.csv"))
+                using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                {
+                    Volunteers.AddRange(csv.GetRecords<Volunteer>());
+                }
+                Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.Volunteers ON;");
+                SaveChanges();
+                Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.Volunteers OFF;");
                 Database.CloseConnection();
             }
         }

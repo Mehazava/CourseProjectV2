@@ -1,0 +1,14 @@
+Id,Next,Measurement,Amount,Name,Description
+1,2,шт.,1,Компьютерные стулья,Эргономический вращающийся стул со спинкой средней высоты.
+2,3,шт.,1,Офисные столы,Столы офисные шириной 140 см глубиной 60 см и высотой 75 см.
+3,4,шт.,1,Настольная лампа,Настольная лампа с креплением к столу.
+4,5,шт.,1,Подставка держатель для бумаги,Подставка держатель для бумаги с креплением к столу.
+5,6,шт.,1,Компьютеры участников,MS-Windows Windows 8.1 (или более новая версия) 64 bit с последними установленными обновлениями. Microsoft Office 2013. Adobe Reader. Processor Intel Core i5-3450 - 3.1GHz - 6MB Cache. Сетевая карта Ethernet 10/100/1000 mbps. Оперативная память RAM - 8GB или больше. Монитор LCD 19''. Видеокарта 1GB или больше. HD 500 GB или больше.
+6,7,шт.,1,Мониторы LCD 22'' и больше,Мониторы LCD 22'' и больше.
+7,8,шт.,1,Источник бесперебойного питания,Источник бесперебойного питания.
+8,9,шт.,1,ПО Eclipse IDE for java EE developers,Програмное обеспечение (везде далее ПО) Eclipse IDE for java EE developers.
+9,10,шт.,1,ПО Framework.net,ПО Framework.net.
+10,11,шт.,1,ПО JDK 8,ПО JDK 8.
+11,12,шт.,1,ПО Microsoft SQL Server 2014 Express,ПО Microsoft SQL Server 2014 Express.
+12,13,шт.,1,ПО Visio Professional 2013,ПО Visio Professional 2013.
+13,0,шт.,1,ПО Microsoft Visual Studio Ultimate 2013,ПО Microsoft Visual Studio Ultimate 2013.

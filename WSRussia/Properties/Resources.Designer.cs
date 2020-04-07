@@ -93,6 +93,26 @@ namespace WSRussia.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Man {
+            get {
+                object obj = ResourceManager.GetObject("Man", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mappa {
+            get {
+                object obj = ResourceManager.GetObject("Mappa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap NoRobo {
             get {
                 object obj = ResourceManager.GetObject("NoRobo", resourceCulture);
@@ -106,6 +126,16 @@ namespace WSRussia.Properties {
         internal static System.Drawing.Bitmap Spidey {
             get {
                 object obj = ResourceManager.GetObject("Spidey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Woman {
+            get {
+                object obj = ResourceManager.GetObject("Woman", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

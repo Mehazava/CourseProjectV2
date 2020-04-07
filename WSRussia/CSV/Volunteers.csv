@@ -1,21 +1,21 @@
-Id,Sex,Name,Password,Country,EMail,ContactNumber,ResultId,CompetentionId,BDay,PicPath
-1,1,Mark Sergushev,123,Japan,MaSe581@gmail.com,2960099,0,2,08/12/2001 14:54:31,
-2,1,Bob Sergushev,123,Russia,BoSe555@gmail.com,2102408,0,4,10/11/1998 09:08:51,
-3,1,Sergey Smith,123,South Korea,SeSm201@gmail.com,2917633,0,4,12/06/1998 09:35:36,
-4,1,John Perky,123,Switzerland,JoPe919@gmail.com,2707445,0,10,04/30/2001 07:06:57,
-5,1,Sam Sergushev,123,Canada,SaSe138@gmail.com,2552430,0,1,05/14/1999 16:01:07,
-6,1,John Perky,123,South Korea,JoPe418@gmail.com,2188985,0,18,10/19/2001 04:30:27,
-7,0,Tanya Parker,123,South Korea,TaPa711@gmail.com,2646502,0,15,03/04/1990 01:20:18,
-8,1,Igor Parker,123,Switzerland,IgPa127@gmail.com,2983314,0,16,05/12/1992 05:42:39,
-9,0,Trisha Preton,123,Italy,TrPr690@gmail.com,2916850,0,9,09/30/1991 04:17:05,
-10,1,Mark Dzerghinsky,123,Germany,MaDz962@gmail.com,2332015,0,9,06/23/2000 16:20:08,
-11,1,Sam Caramba,123,USA,SaCa815@gmail.com,2479587,0,1,05/23/2000 08:49:39,
-12,1,John Potter,123,Spain,JoPo684@gmail.com,2817827,0,15,02/19/1990 05:16:56,
-13,0,Jane Smith,123,South Korea,JaSm662@gmail.com,2422143,0,8,06/13/1993 23:43:48,
-14,1,Charlie Preton,123,Japan,ChPr915@gmail.com,2542729,0,7,12/13/1999 11:23:43,
-15,0,Elena Smith,123,USA,ElSm417@gmail.com,2199131,0,14,08/17/1990 16:23:54,
-16,0,Darya Dzerghinsky,123,USA,DaDz753@gmail.com,2320598,0,4,12/06/1999 03:04:50,
-17,0,Trisha Belkov,123,Spain,TrBe959@gmail.com,2442242,0,6,05/14/2000 07:17:06,
-18,1,Pavel Sergushev,123,Japan,PaSe919@gmail.com,2480480,0,9,09/05/1991 03:40:39,
-19,1,Cid Caramba,123,Belarus,CiCa545@gmail.com,2974225,0,6,03/31/1995 23:19:56,
-20,0,Sasha Sergushev,123,Belarus,SaSe721@gmail.com,2287979,0,9,07/30/1998 19:24:23,
+Id,Sex,Name,CompetentionId,Place
+1,1,Mark Sergushev,2,Бийск
+2,1,Bob Sergushev,4,Москва
+3,1,Sergey Smith,4,Владивосток
+4,1,John Perky,10,Хабаровск
+5,1,Sam Sergushev,1,Новгород
+6,1,John Perky,18,Новосибирск
+7,0,Tanya Parker,15,Белгород
+8,1,Igor Parker,16,Воронеж
+9,0,Trisha Preton,9,Санкт-Петербург
+10,1,Mark Dzerghinsky,9,Владивосток
+11,1,Sam Caramba,1,Белгород
+12,1,John Potter,15,Москва
+13,0,Jane Smith,8,Москва
+14,1,Charlie Preton,7,Новосибирск
+15,0,Elena Smith,14,Хабаровск
+16,0,Darya Dzerghinsky,4,Воронеж
+17,0,Trisha Belkov,6,Москва
+18,1,Pavel Sergushev,9,Новгород
+19,1,Cid Caramba,6,Санкт-Петербург
+20,0,Sasha Sergushev,9,Москва
