@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -55,42 +56,54 @@ namespace WSRussia
                 case 0:
                     ParentF.Login = ParentF.db.Participants.FirstOrDefault(p =>
                         p.Id == IdLog && p.Password == textBoxLoginPassword.Text);
+                    ParentF.LoginType = 1;
                     break;
                 case 1:
                     ParentF.Login = ParentF.db.Coordinators.FirstOrDefault(p =>
                         p.Id == IdLog && p.Password == textBoxLoginPassword.Text);
+                    ParentF.LoginType = 2;
                     break;
                 case 2:
                     ParentF.Login = ParentF.db.Experts.FirstOrDefault(p =>
                         p.Id == IdLog && p.Password == textBoxLoginPassword.Text);
+                    ParentF.LoginType = 3;
                     break;
                 case 3:
                     ParentF.Login = ParentF.db.Administrators.FirstOrDefault(p =>
                         p.Id == IdLog && p.Password == textBoxLoginPassword.Text);
+                    ParentF.LoginType = 4;
                     break;
             }
             if (ParentF.Login == null)
             {
                 DialogResult res = MessageBox.Show("Неправильный Id или пароль",
                     "Не так надо", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ParentF.LoginType = 0;
                 return;
+            }
+            if (checkBoxRemember.Checked == true)
+            {
+                try
+                {
+                    string[] lines = { ParentF.Login.Id.ToString(),
+                        ParentF.Login.Password, ParentF.LoginType.ToString() };
+                    File.WriteAllLines(Path.Combine(Directory.GetCurrentDirectory(),
+                        "login.txt"), lines);
+                }
+                finally { }
             }
             switch (comboBoxPersonType.SelectedIndex)
             {
                 case 0:
-                    ParentF.LoginType = 1;
                     ParentF.GoPage(Page.Participant);
                     break;
                 case 1:
-                    ParentF.LoginType = 2;
                     ParentF.GoPage(Page.Coordinator);
                     break;
                 case 2:
-                    ParentF.LoginType = 3;
                     ParentF.GoPage(Page.Expert);
                     break;
                 case 3:
-                    ParentF.LoginType = 4;
                     ParentF.GoPage(Page.Administrator);
                     break;
             }

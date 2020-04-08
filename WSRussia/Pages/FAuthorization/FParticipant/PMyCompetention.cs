@@ -18,7 +18,13 @@ namespace WSRussia
             InitializeComponent();
             labelPageTitle.Text = "Моя компетенция";
         }
-
+        String MakeBig(String bae, int total)
+        {
+            int add = total - bae.Length;
+            bae.PadLeft(add / 2);
+            bae.PadRight(total);
+            return bae;
+        }
         private void PMyCompetention_Load(object sender, EventArgs e)
         {
             if (ParentF == null)
@@ -31,9 +37,20 @@ namespace WSRussia
                 throw new Exception("Couldn't find competention.");
             }
             labelCompetention.Text = Comp.Id + " - " + Comp.Name;
-            imageList1.Images.Add(Properties.Resources.Man);
+            //page 1 2
             imageList1.Images.Add(Properties.Resources.Woman);
+            imageList1.Images.Add(Properties.Resources.Man);
+            foreach (var pE in ParentF.db.Participants.Where(p => p.CompetentionId == Comp.Id))
+            {
+                listView1.Items.Add($"{pE.Name}\n{pE.Country}", pE.Sex);
+            }
+            foreach (var pE in ParentF.db.Experts.Where(p => p.CompetentionId == Comp.Id))
+            {
+                listView2.Items.Add($"{pE.Name}\n{pE.Country}", pE.Sex);
+            }
+            //p 3
             pictureBoxMap.Image = Properties.Resources.Mappa;
+            //p 4
             int counter = 0;
             int NextD = Comp.Infrastructure;
             Infrastructure Infra;
@@ -47,6 +64,7 @@ namespace WSRussia
                 dataGridView1.Rows.Add(++counter, Infra.Name, Infra.Description, Infra.Measurement, Infra.Amount);
                 NextD = Infra.Next;
             }
+            //p 5
             NextD = Comp.SMP;
             SMP sMP;
             DataGridViewCellStyle Separator = new DataGridViewCellStyle();

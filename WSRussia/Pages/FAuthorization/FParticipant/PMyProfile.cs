@@ -52,7 +52,14 @@ namespace WSRussia
             {
                 throw new Exception("Sorry, but we don't allow personal pictures there.");
             }
-            pictureYou.Image = Properties.Resources.Spidey;
+            if (ParentF.Login.Sex == 0)
+            {
+                pictureYou.Image = Properties.Resources.Woman;
+            }
+            else
+            {
+                pictureYou.Image = Properties.Resources.Man;
+            }
             labelName.Text = ParentF.Login.Name;
             labelSex.Text = (ParentF.Login.Sex == 0) ? "F" : "M";
             labelDoB.Text = ParentF.Login.BDay.ToString("dd/MM/yyyy");

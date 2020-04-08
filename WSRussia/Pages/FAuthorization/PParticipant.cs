@@ -48,7 +48,15 @@ namespace WSRussia
             {
                 throw new Exception("Sorry, but we don't allow personal pictures there.");
             }
-            pictureYou.Image = Properties.Resources.Spidey;
+            if (ParentF.Login.Sex == 0)
+            {
+                pictureYou.Image = Properties.Resources.Woman;
+            }
+            else
+            {
+                pictureYou.Image = Properties.Resources.Man;
+            }
+            
         }
 
         private void buttonMyProfile_Click(object sender, EventArgs e)

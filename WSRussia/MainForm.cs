@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,24 +14,71 @@ namespace WSRussia
 {
     public partial class MainForm : Form
     {
-        public MainForm()
-        {
-            InitializeComponent();
-            TimeRemaining = new TimeToContest();
-            TimeRemaining.Label = labelTimeRemaining;
-            CurrentPage = Page.Error;
-            ControlPage = null;
-            Login = null;
-            LoginType = 0;
-            db = new WSRContext();
-            GoPage(Page.Title);
-        }
         private TimeToContest TimeRemaining;
         private Page CurrentPage;
         private UserControl ControlPage;
         public WSRContext db;
         public Person Login;
         public int LoginType;//0 - no, 1 - parti, 2 - coor, 3 - expe, 4 - admi 
+        public MainForm()
+        {
+            InitializeComponent();
+            TimeRemaining = new TimeToContest();
+            TimeRemaining.Label = labelTimeRemaining;
+            CurrentPage = Page.Error;
+            db = new WSRContext();
+            if (File.Exists(Path.Combine(Directory.GetCurrentDirectory(), "login.txt")))
+            {
+                try
+                {
+                    string[] log = File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), "login.txt"));
+                    int lid = int.Parse(log[0]);
+                    int lty = int.Parse(log[2]);
+                    Login = null;
+                    switch (lty)
+                    {
+                        case 1:
+                            Login = db.Participants.FirstOrDefault(p =>
+                                p.Id == lid && p.Password == log[1]);
+                            break;
+                        case 2:
+                            Login = db.Coordinators.FirstOrDefault(p =>
+                                p.Id == lid && p.Password == log[1]);
+                            break;
+                        case 3:
+                            Login = db.Experts.FirstOrDefault(p =>
+                                p.Id == lid && p.Password == log[1]);
+                            break;
+                        case 4:
+                            Login = db.Administrators.FirstOrDefault(p =>
+                                p.Id == lid && p.Password == log[1]);
+                            break;
+                    }
+                    if (Login == null)
+                    {
+                        LoginType = 0;
+                        DialogResult reso = MessageBox.Show("Record for autologin not found",
+                            "Не так надо", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        LoginType = lty;
+                    }
+                }
+                catch
+                {
+                    Login = null;
+                    LoginType = 0;
+                }
+            }
+            else
+            {
+                Login = null;
+                LoginType = 0;
+            }
+            ControlPage = null;
+            GoPage(Page.Title);
+        }
         public void GoPage(Page page)
         {
             SetupForm(page);
@@ -214,6 +262,10 @@ namespace WSRussia
         {
             Login = null;
             LoginType = 0;
+            if (File.Exists(Path.Combine(Directory.GetCurrentDirectory(), "login.txt")))
+            {
+                File.Delete(Path.Combine(Directory.GetCurrentDirectory(), "login.txt"));
+            }
             GoPage(Page.Title);
         }
     }

@@ -95,3 +95,6 @@ E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.PLoadVolonteur.resources
 E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.PDistributeVolonteur.resources
 E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.PEditParticipant.resources
 E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.PEditChampionship.resources
+E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.FormEnterRData.resources
+E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.PRating.resources
+E:\Work\CourseProjectV2\WSRussia\obj\Debug\WSRussia.PCheckResults.resources

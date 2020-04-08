@@ -86,6 +86,7 @@
             // 
             // pictureYou
             // 
+            this.pictureYou.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureYou.Location = new System.Drawing.Point(88, 121);
             this.pictureYou.Name = "pictureYou";
             this.pictureYou.Size = new System.Drawing.Size(160, 200);
