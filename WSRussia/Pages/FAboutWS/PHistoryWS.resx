@@ -117,4 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>   The Albert Vidal Award is a prestigious award, named after the founder of WorldSkills International (formerly known as the International Vocational Training Organisation). During the first thirty-one WorldSkills Competitions (formerly known as the Vocational Training Competitions), Francisco Albert Vidal, from Spain, was responsible for the achievement of the original goals in a changing world: 33 years as an untiring promoter in his position as Secretary General and seven years as President of the International Organisation constantly presenting new ideas. The Vocational Training Competitions became his life's work and the International Organisation was shaped into what it is today. In memory of Albert Vidal, the Award recognises the Competitor that achieves the overall highest score out of all Competitors in all Skill categories.
+
+   The Albert Vidal Award is connected with the implementation of the 500 mark system, developed by former WorldSkills President Cees Beuk, after the WorldSkills Competition 1985 held in Osaka, Japan. The new system was developed upon the request from the Technical Committee Chairman René Gonthier and his vision of making the Competition scores more comparable and universal.
+
+   With the new system, it became possible to compare the scores from skill to skill and from Expert to Expert within each skill, making their scoring behaviour more transparent. The new system became effective in 1988 (when the WorldSkills Competition was held in Sydney, Australia) at which the 'Best of the Competition Award' was introduced for the first time.
+
+   After Albert Vidal’s death in October 1993 the Award was renamed (proposed by Tjerk Dusseldorp, past President, WSI) from the 'Best of the Competition Award' to the 'Albert Vidal Award' in order to honour the contributions of Albert Vidal for his decades of devotion to the WorldSkills movement. The new name of the award, first became effective in 1995 when the WorldSkills Competition took place in Lyon, France. 
+
+   “Fill youth with enthusiasm through special action! Convince young people’s parents, trainers and company chiefs that a promising future is possible only through good vocational training” -Francisco Albert Vida</value>
+  </data>
+  <data name="richTextBox3.Text" xml:space="preserve">
+    <value>   The 1st WorldSkills Competition took place at “Virgen de la Paloma” Vocational Training Institute in Madrid, Spain, in 1950.
+
+   WorldSkills International, formerly known as the International Vocation Training Organisation (IVTO), was founded in the 1940s and emerged from a desire to create new employment opportunities for young people in some of the economies that were devastated by the Second World War.</value>
+  </data>
+  <data name="richTextBox2.Text" xml:space="preserve">
+    <value>   Chris Humphries has a long and distinguished record in the world of vocational training and skills. A highly experienced manager and chief executive, he was chair of the UK government’s Skills Task Force for three years from 1998, also chairing several charitable NGOs with a particular focus on tertiary and higher education. 
+
+   Most recently he was chair of the University of West London for nine years until 2018. As a chief executive, Chris was director general of the British Chambers of Commerce from 1998 to 2001, and director general of the UK’s City &amp; Guilds from 2001 to 2007.
+
+   His final executive role was as the founding chief executive of the Commission for Employment and Skills, advising four UK governments on policy and practise between 2001 and 2007. He joined the WorldSkills movement as the chair of WorldSkills UK, and, as chair, led the 2006 successful bid for WorldSkills London 2011. As an Honorary Member, he was subsequently involved in the development of the Vision 2025 strategic plan.
+
+   Born in Australia, Chris moved to London in 1974, where he lives with his wife and two daughters. In 1998 he was awarded the CBE for services to training and enterprise. Chris was elected to the WorldSkills Board in 2019.</value>
+  </data>
 </root>
