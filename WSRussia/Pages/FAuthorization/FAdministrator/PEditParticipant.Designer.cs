@@ -53,6 +53,7 @@
             this.comboBoxField = new System.Windows.Forms.ComboBox();
             this.labelSFilter = new System.Windows.Forms.Label();
             this.textBoxFilter = new System.Windows.Forms.TextBox();
+            this.buttonDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,6 +82,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -223,7 +225,7 @@
             this.comboBoxField.MaxDropDownItems = 30;
             this.comboBoxField.Name = "comboBoxField";
             this.comboBoxField.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBoxField.Size = new System.Drawing.Size(282, 21);
+            this.comboBoxField.Size = new System.Drawing.Size(182, 21);
             this.comboBoxField.TabIndex = 8;
             this.comboBoxField.SelectedIndexChanged += new System.EventHandler(this.comboBoxField_SelectedIndexChanged);
             // 
@@ -231,7 +233,7 @@
             // 
             this.labelSFilter.AutoSize = true;
             this.labelSFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSFilter.Location = new System.Drawing.Point(442, 65);
+            this.labelSFilter.Location = new System.Drawing.Point(335, 65);
             this.labelSFilter.Name = "labelSFilter";
             this.labelSFilter.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelSFilter.Size = new System.Drawing.Size(133, 16);
@@ -240,15 +242,30 @@
             // 
             // textBoxFilter
             // 
-            this.textBoxFilter.Location = new System.Drawing.Point(581, 64);
+            this.textBoxFilter.Location = new System.Drawing.Point(474, 64);
             this.textBoxFilter.Name = "textBoxFilter";
             this.textBoxFilter.Size = new System.Drawing.Size(190, 20);
             this.textBoxFilter.TabIndex = 17;
             this.textBoxFilter.TextChanged += new System.EventHandler(this.textBoxFilter_TextChanged);
             // 
+            // buttonDelete
+            // 
+            this.buttonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDelete.Location = new System.Drawing.Point(682, 44);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(89, 56);
+            this.buttonDelete.TabIndex = 18;
+            this.buttonDelete.Text = "Удалить выбранные записи";
+            this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
             // PEditParticipant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.textBoxFilter);
             this.Controls.Add(this.labelSFilter);
             this.Controls.Add(this.labelCount);
@@ -266,6 +283,7 @@
             this.Controls.SetChildIndex(this.labelCount, 0);
             this.Controls.SetChildIndex(this.labelSFilter, 0);
             this.Controls.SetChildIndex(this.textBoxFilter, 0);
+            this.Controls.SetChildIndex(this.buttonDelete, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -292,5 +310,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.Button buttonDelete;
     }
 }

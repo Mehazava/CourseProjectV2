@@ -318,7 +318,41 @@ namespace WSRussia
                         case 9: pE.Password = newVal.ToString(); break;
                         case 10: pE.PicPath = newVal?.ToString(); break;
                     }
+                }
+            }
+        }
 
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewCell oneCell in dataGridView1.SelectedCells)
+            {
+                if (oneCell.Selected && oneCell.OwningRow != null)
+                {
+                    if (String.IsNullOrEmpty(dataGridView1.Rows[oneCell.RowIndex].Cells[0].Value?.ToString()))
+                    {
+                        DialogResult res = MessageBox.Show("Выбраная строка не связанна с записью.",
+                            "Не так надо", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    int pId = (int)dataGridView1.Rows[oneCell.RowIndex].Cells[0].Value;
+                    Participant pE = ParentF.db.Participants.FirstOrDefault(p => p.Id == pId);
+                    if (pE == null)
+                    {
+                        DialogResult res = MessageBox.Show("Запись не была найдена.",
+                            "Не так надо", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        dataGridView1.Rows.RemoveAt(oneCell.RowIndex);
+                        return;
+                    }
+                    DialogResult Ask = MessageBox.Show("Вы уверены что хотите удалить данную запись?\n" +
+                        dataGridView1.Rows[oneCell.RowIndex].Cells[1].Value.ToString(),
+                            "Вопрос есть", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    if (Ask == DialogResult.OK)
+                    {
+                        ParentF.db.Participants.Remove(pE);
+                        ParentF.db.SaveChanges();
+                        dataGridView1.Rows.RemoveAt(oneCell.RowIndex);
+                        labelCount.Text = ParentF.db.Participants.ToList().Count.ToString();
+                    }
                 }
             }
         }

@@ -327,6 +327,9 @@
     <EmbeddedResource Include="Pages\FAboutWS\PHistoryWS.resx">
       <DependentUpon>PHistoryWS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pages\FAuthorization\FAdministrator\PEditChampionship.resx">
+      <DependentUpon>PEditChampionship.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pages\FAuthorization\FAdministrator\PEditParticipant.resx">
       <DependentUpon>PEditParticipant.cs</DependentUpon>
     </EmbeddedResource>
